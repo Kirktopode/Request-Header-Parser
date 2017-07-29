@@ -28,6 +28,6 @@ app.get("*", function(request, response){
   response.end(JSON.stringify(data));
 });
 
-var listener = app.listen(8080, function () {
+var listener = app.listen(process.env.PORT || 8080, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
